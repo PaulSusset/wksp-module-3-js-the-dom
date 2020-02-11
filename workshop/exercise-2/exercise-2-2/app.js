@@ -13,8 +13,9 @@ for (i=0; i<FROGS; i++){
     console.log(span)
     document.querySelector('#'+laneId).appendChild(span);
 }
-    // 2. Create li    
+let racers = [];
 
-    // 3. Create span and add it to the li
-
-    // 4. Assign an id to each lane
+for (i=1; i<=FROGS; i++){
+    racers.push(frogStable[Math.floor(Math.random(frogStable) * FROGS)]);
+}
+console.log(racers);

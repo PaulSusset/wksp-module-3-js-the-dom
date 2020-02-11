@@ -6,7 +6,9 @@
 
 ```js
 // Example
-
+setTimeout(function(){
+    console.log('Hello')
+} 1000)
 ```
 
 ---
@@ -15,9 +17,12 @@
 
 ```js
 // Example
-
+const myTimer = setInterval(function(){
+    console.log('here')
+}1000)
+clearInterval(myTimer) // to stop the interval
 ```
-
+Like setTimeout(), but repeats on an interval indefinitely.
 ---
 
 💡 Always use `clearInterval` to stop your `setInterval` loop

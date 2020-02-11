@@ -20,8 +20,18 @@ image.alt = 'alt="Robin Sparkles';
 anchor.href = 'https://himym2017.wordpress.com/2017/03/25/the-best-himym-episode-according-to-fans/';
 anchor.innerText = 'Source';
 JSLink.rel = 'stylesheet';
-JSLink.href = "./styles.css"
-JSLink.class = 'css'
+JSLink.href = "./styles.css";
+JSLink.classList.add('css');
+
+h1.classList.add('titleStyle');
+h2.classList.add('subTStyle');
+paragraph1.classList.add('pStyle');
+paragraph2.classList.add('pStyle');
+paragraph3.classList.add('pStyle');
+paragraph4.classList.add('pStyle');
+image.classList.add('robin');
+anchor.classList.add('link');
+
 
 document.getElementById('main').appendChild(h1);
 document.getElementById('main').appendChild(paragraph1);

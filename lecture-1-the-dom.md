@@ -87,6 +87,11 @@ Instead, we will use these methods
 
 ```js
 // Example
+document.getElementById('my-div') // no need for #
+document.querySelector('body')
+document.querySelector('#my-div')
+document.querySelector('div.my-class > ul'.)
+
 
 ```
 
@@ -100,12 +105,13 @@ Instead, we will use these methods
 
 You can modify the content of a leaf, an end node with 
 
-- [`.innerText()`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
-- [`.innerHTML()`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp) 
+- [`.innerText`](https://www.w3schools.com/jsref/prop_node_innertext.asp)
+- [`.innerHTML`](https://www.w3schools.com/jsref/prop_html_innerhtml.asp) 
 
 ```js
 // Example
-
+const myTitle = document.getElementById('my-title');
+myTitle.innerText = 'New Title';
 ```
 
 ---
@@ -127,7 +133,10 @@ To add a new node to an HTML page, you need to do it in 3 steps.
 
 ```js
 // Example
-
+const paragraph = document.createElement('p');
+paragraph.innerText = 'new hacker right here.'  
+document.querySelector('body').appendChild(paragraph);
+paragraph.id = 'new-id' // target attributes with .
 ```
 
 ---
@@ -155,7 +164,7 @@ myDiv.style.background = "purple";
 ```
 
 ⚠️ Houston. We have a problem!
-
+Can't use dashes for styling in JS. In the case of border-radius, use borderRadius (camelCasing)
 ---
 
 #### Using `classList`
